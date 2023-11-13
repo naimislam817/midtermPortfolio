@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+nav.navbar {
+      padding: 10px 0; 
+    }
+    nav.navbar a.navbar-brand {
+      font-size: 2rem; 
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+
+    footer {
+      background-color: #343a40; 
+      color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="name" class="py-5 text-center">
+    <div class="container">
+      <h1>Naim Islam</h1>
+      <img src="port1.jpeg" alt="Your Picture" style="border-radius: 50%; max-width: 200px; margin-top: 20px;">
+    </div>
+  </section>
+
+<section id="education" class="py-5">
+    <div class="container">
+      <h2>Educational Qualifications</h2>
+  
+      <div class="mb-4">
+        <h4>O Level</h4>
+        <p>2016</p>
+      </div>
+
+      <div class="mb-4">
+        <h4>A Level</h4>
+        <p>2019</p>
+      </div>
+      <div>
+
+        <h4>Bachelor's Degree</h4>
+        <p>Bachelor of Computer Science</p>
+      </div>
+      <div>
+        <h4>About Myself</h4>
+        <p>I'm a final year CSE student with a diverse range of skills that I've developed throughout my academic journey. I'm proficient in programming languages like Java, Python, and C++, and I have a solid understanding of data structures, algorithms, and computer architecture. I have hands-on experience with software development tools and platforms, including IDEs, Git, and cloud computing services. I've demonstrated strong analytical and problem-solving skills through various projects and coursework, and I'm confident in my ability to take on complex technical challenges. Additionally, I possess excellent communication skills and have successfully presented technical information to non-technical audiences. I'm a team player and have worked effectively in various group projects, showcasing my ability to collaborate with others and work towards a common goal. quidem impedit.</p>
+      </div>
+    </div>
+  </section>
+  
+
+<section id="skills" class="py-5 bg-light">
+    <div class="container">
+      <h2>Skills</h2>
+      <div style="width: 50%; margin: auto;">
+        <canvas id="skillsChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+<section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="row">
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="portproject1.jpeg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Traffic Management app of Mega City</h5>
+              <p class="card-text">Developed in Object Orientated Programming in Java </p>
+            </div>
+          </div>
+        </div>
+  
+
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="project2.jpeg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Juice Selling Website</h5>
+              <p class="card-text">Developed using HTML,CSS,JAVASCRIPT</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card">
+            <img src="project3.png" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title"> Website for steel corporation</h5>
+              <p class="card-text">Created a website for my fathers Business using HTML,CSS,JAVASCRIPT</p>
+            </div>
+          </div>
+        </div>
+  
+   
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 My Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Skills Chart
+  var ctx = document.getElementById('skillsChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['HTML', 'CSS', 'JavaScript', 'Laravel'], 
+      datasets: [{
+        label: 'Skill Level',
+        data: [90, 85, 80, 75], 
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
